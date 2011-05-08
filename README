@@ -1,0 +1,7 @@
+This is the brains for the casehistory application. It applies machine learning algorithms to news items in order to pick up the best ones that relate to the queried news story, from a set of search results.
+
+We have a couple of choices for implementing Intelligence, to begin with. These are:
+(i) Python based NLTK
+(ii) Java based Apache Mahout
+
+Right now, NLTK seems a nice and quick fit that can help us launch soon. Mahout has its strengths though.
