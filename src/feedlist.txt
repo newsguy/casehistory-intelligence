@@ -1,0 +1,10 @@
+http://feeds.feedburner.com/37signals/beMH
+http://feeds.feedburner.com/blogspot/bRuz
+http://battellemedia.com/index.xml
+http://blog.guykawasaki.com/index.rdf
+http://blog.outer-court.com/rss.xml
+http://feeds.searchenginewatch.com/sewblog
+http://blog.topix.net/index.rdf
+http://blogs.abcnews.com/theblotter/index.rdf
+http://feeds.feedburner.com/ConsumingExperienceFull
+http://flagrantdisregard.com/index.php/feed/
