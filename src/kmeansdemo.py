@@ -1,6 +1,5 @@
 import nltk
 import numpy
-import random
 
 def demo():
     # example from figure 14.9, page 517, Manning and Schutze

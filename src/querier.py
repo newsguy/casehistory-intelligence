@@ -1,16 +1,20 @@
 '''
-Created on May 16, 2011
+Created on Jun 28, 2011
 
-StompSimple example from http://code.google.com/p/stomppy/wiki/SimpleExample
-
+This module is only for testing the newsitemspicker component.
+In real scenario, the queries to newsitemspicker component will
+be sent by the web front end.
+ 
 @author: Abhinav Tripathi
 '''
 import time
 import logging
 import stomp
-import sys
 
-class MyListener(object):
+'''
+    Right now, only on_error is meaningful, we may find some use for other methods later on
+'''
+class QuerierListener(object):
     def on_error(self, headers, message):
         print 'received an error %s' % message
 
@@ -20,24 +24,24 @@ class MyListener(object):
         print('received message\n %s' %message)
 
 logging.basicConfig()
-log = logging.getLogger('Stomp')
+log = logging.getLogger('stomp')
 log.setLevel(logging.DEBUG)
 connected = False
 while not connected:
     try:
         conn = stomp.Connection()
-        conn.set_listener('simplelistener', MyListener())
+        conn.set_listener('querierlistener', QuerierListener())
         conn.start()
         conn.connect(wait=True)
-        conn.subscribe(destination='/queue/test', ack='auto')
         connected = True
     except:
         pass
 
 if connected:
-    print 'Connected to broker now!'
+    print 'Connected to broker!'
+    print 'Will send in queries now to newsitemspicker component ...'
 
-conn.send(' '.join(sys.argv[1:]), destination='/queue/test')
+conn.send('userId:xyz,query:India', destination='/queue/queries')
 
 time.sleep(2)
 conn.disconnect()

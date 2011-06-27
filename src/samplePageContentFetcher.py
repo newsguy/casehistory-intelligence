@@ -17,6 +17,6 @@ def getWordsFromFile(file):
 
 if __name__ == '__main__':
     file = open('gss.html', 'r')
-    words = urlstemmer.getContentWords(getWordsFromFile(file))
-    print 'words = '+str(words)
+    '''words = urlstemmer.getContentWords(getWordsFromFile(file))
+    print 'words = '+str(words)'''
     file.close()

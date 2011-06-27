@@ -92,4 +92,3 @@ if __name__ == '__main__':
 	print classifier.classify(documentFeatures(list(getWordsFromUrl('http://jeremymanson.blogspot.com/2010/07/why-many-profilers-have-serious.html')), word_features))
 	print classifier.classify(documentFeatures(list(getWordsFromUrl('http://today.java.net/pub/a/today/2006/01/10/introduction-to-nutch-1.html')), word_features))
 	print(urlstemmer('http://stackoverflow.com/questions/184618/what-is-the-best-comment-in-source-code-you-have-ever-encountered'))'''
-    
